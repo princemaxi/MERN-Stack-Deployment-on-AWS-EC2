@@ -46,13 +46,37 @@ This stack allows **end-to-end development** using JavaScript — from the datab
 
 Below is the high-level architecture of a MERN application deployed on AWS EC2:
 
-```mermaid
-flowchart TD
-    User["Browser"] -->|HTTP Requests| React["React.js Frontend"]
-    React -->|API Calls (Axios)| Express["Express.js Backend"]
-    Express -->|Runs on| NodeJS["Node.js Runtime"]
-    NodeJS -->|Hosted on| EC2["Amazon EC2 Instance"]
-    Express -->|CRUD Ops| MongoDB["MongoDB Atlas"]
+```pgsql
+                          +--------------------+
+                          |     Browser        |
+                          |   (User Client)    |
+                          +---------+----------+
+                                    |
+                                    | HTTP Requests
+                                    v
+                          +---------+----------+
+                          |   React.js Frontend|
+                          +---------+----------+
+                                    |
+                                    | API Calls (Axios)
+                                    v
+                          +---------+----------+
+                          | Express.js Backend |
+                          +---------+----------+
+                                    |
+               +--------------------+--------------------+
+               |                                         |
+               | CRUD Operations                         | Runs on
+               v                                         v
+     +---------+----------+                     +--------+---------+
+     |    MongoDB Atlas   |                     |   Node.js Runtime|
+     +--------------------+                     +--------+---------+
+                                                          |
+                                                          | Hosted on
+                                                          v
+                                                +---------+----------+
+                                                | Amazon EC2 Instance|
+                                                +--------------------+
 ```
 
 ## 🛠 Prerequisites
