@@ -50,9 +50,9 @@ Below is the high-level architecture of a MERN application deployed on AWS EC2:
 flowchart TD
     User[Browser] -->|HTTP Requests| React[React.js Frontend]
     React -->|API Calls (Axios)| Express[Express.js Backend]
+    Express -->|Runs on| NodeJS[Node.js Runtime]
+    NodeJS -->|Hosted on| EC2[Amazon EC2 Instance]
     Express -->|CRUD Ops| MongoDB[(MongoDB Atlas)]
-    EC2[Amazon EC2 Instance] --- React
-    EC2 --- Express
 ```
 
 ## 🛠 Prerequisites
