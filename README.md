@@ -83,7 +83,7 @@ Below is the high-level architecture of a MERN application deployed on AWS EC2:
 
 Before starting deployment, ensure you have:
 
-- ✅ An AWS Account [Sign up here](aws.amazon.com)
+- ✅ An AWS Account [Sign up here](https://aws.amazon.com)
 - ✅ Windows OS installed
 - ✅ An AWS EC2 instance running Ubuntu 20.04 or later
 - ✅ Ability to SSH into EC2 instance
