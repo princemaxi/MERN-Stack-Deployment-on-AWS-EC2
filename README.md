@@ -808,6 +808,7 @@ npm run dev
 **The Todo app should be ready and fully functional with the functionality discussed earlier: creating a task, deleting a task and viewing all your task. Access it in your browser `http://<Public-IP-or-Public-DNS>:3000` you should see the UI below:**
 
 ![Alt text describing image](images/z11.png)
+![Alt text describing image](images/z12.png)
 
 ## Final Notes
 
